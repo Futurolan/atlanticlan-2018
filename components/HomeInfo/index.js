@@ -1,46 +1,82 @@
 import React from 'react'
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
+import PropTypes from 'prop-types'
 import './styles.scss'
 
-const HomeInfo = () => (
-  <div className='ga-home-info has-bg-grey-area'>
-    <section className='section is-medium'>
-      <div className='container'>
+function HomeInfo ({
+  data: { loading, error, nodeQuery }
+}) {
+  if (error) {
+    return <div className='notification is-danger'>Une erreur est survenue pendant le chargement des bloc d'informations !!!</div>
+  }
 
-        <div className='columns is-variable is-8 is-centered is-multiline'>
-          <div className='column is-12-tablet is-one-third-desktop has-text-centered'>
-            <div className='box has-background-dark'>
+  if (nodeQuery && nodeQuery.entities && nodeQuery.entities.length > 0) {
+    const node = nodeQuery.entities[0]
+    return <div className='ga-home-info has-bg-grey-area'>
+      <section className='section is-medium'>
+        <div className='container'>
 
-              <h3 className='title has-text-weight-bold has-text-white title-line'><span>Nouvelle édition</span></h3>
-              <p className='content has-text-white'>
-            La Gamers Assembly 2018 est de retour du 31 mars au 2 avril 2018 au Parc des Expositions de Poitiers !
-              </p>
+          <div className='columns is-variable is-8 is-centered is-multiline'>
+            <div className='column is-12-tablet is-one-third-desktop has-text-centered'>
+              <div className='box has-background-dark'>
+                <h3 className='title has-text-weight-bold has-text-white title-line'><span>{node.title1}</span></h3>
+                <div className='content has-text-white' dangerouslySetInnerHTML={{__html: node.content1.value}} />
+              </div>
             </div>
-          </div>
-          <div className='column is-12-tablet  is-one-third-desktop has-text-centered'>
-            <div className='box has-background-dark'>
-
-              <h3 className='title has-text-weight-bold has-text-white title-line'><span>Inscriptions</span></h3>
-              <p className='content has-text-white'>
-            Les inscriptions pour la Gamers Assembly 2018 ouvriront le <b>22 décembre 2017 à 20h</b>
-              </p>
+            <div className='column is-12-tablet  is-one-third-desktop has-text-centered'>
+              <div className='box has-background-dark'>
+                <h3 className='title has-text-weight-bold has-text-white title-line'><span>{node.title2}</span></h3>
+                <div className='content has-text-white' dangerouslySetInnerHTML={{__html: node.content2.value}} />
+              </div>
             </div>
-          </div>
-          <div className='column is-12-tablet  is-one-third-desktop has-text-centered'>
-            <div className='box has-background-dark'>
-
-              <h3 className='title has-text-weight-bold has-text-white title-line '><span>Réseaux sociaux</span></h3>
-              <p className='content has-text-white'>
-            Rejoignez-nous !<br />
-            Twitter : <a href=''>@GamersAssembly</a><br />
-            Facebook : <a href=''>Gamers Assembly</a>
-              </p>
+            <div className='column is-12-tablet  is-one-third-desktop has-text-centered'>
+              <div className='box has-background-dark'>
+                <h3 className='title has-text-weight-bold has-text-white title-line '><span>{node.title3}</span></h3>
+                <div className='content has-text-white' dangerouslySetInnerHTML={{__html: node.content3.value}} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
+  }
+  return <div className='notification'>Chargement des blocs d'information en cours.</div>
+}
 
-)
+export const infos = gql`
+{
+  nodeQuery(
+  filter:{
+    conditions:[
+      {field:"type",value:["home_info"],operator:EQUAL},
+      {field:"field_home_info_edition",value:["${process.env.EDITION_ID}"]},
+      {field:"status",value:["1"]}
+    ]},
+  sort:[{field:"created",direction:DESC}],
+  limit:1) {
+    entities {
+      ... on NodeHomeInfo{
+        title1:fieldHomeInfoTitle1
+        content1:fieldHomeInfoContent1{
+          value:processed
+        }
+        title2:fieldHomeInfoTitle2
+        content2:fieldHomeInfoContent2{
+          value:processed
+        }
+        title3:fieldHomeInfoTitle3
+        content3:fieldHomeInfoContent3{
+          value:processed
+        }
+      }
+    }
+  }
+}
+`
 
-export default HomeInfo
+HomeInfo.propTypes = {
+  data: PropTypes.object
+}
+
+export default graphql(infos)(HomeInfo)

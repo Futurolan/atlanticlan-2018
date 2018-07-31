@@ -10,7 +10,6 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "@bit/bmagic.gamers-assembly.components.tournament-slot-progress": "^1.0.0",
     "@fortawesome/fontawesome-free": "^5.2.0",
     "@zeit/next-sass": "^0.2.0",
     "apollo-boost": "^0.1.12",

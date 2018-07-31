@@ -170,23 +170,6 @@
         "trackDir": "components/TournamentContent",
         "origin": "AUTHORED"
     },
-    "bmagic.gamers-assembly/components/home-info@1.0.0": {
-        "files": [
-            {
-                "relativePath": "components/HomeInfo/index.js",
-                "test": false,
-                "name": "index.js"
-            },
-            {
-                "relativePath": "components/HomeInfo/styles.scss",
-                "test": false,
-                "name": "styles.scss"
-            }
-        ],
-        "mainFile": "components/HomeInfo/index.js",
-        "trackDir": "components/HomeInfo",
-        "origin": "AUTHORED"
-    },
     "bmagic.gamers-assembly/components/active-link@1.0.0": {
         "files": [
             {
@@ -343,6 +326,22 @@
         ],
         "mainFile": "components/TournamentList/index.js",
         "trackDir": "components/TournamentList",
+        "origin": "AUTHORED"
+    },
+    "bmagic.gamers-assembly/components/home-info@1.0.1": {
+        "files": [
+            {
+                "name": "index.js",
+                "relativePath": "components/HomeInfo/index.js",
+                "test": false
+            },
+            {
+                "name": "styles.scss",
+                "relativePath": "components/HomeInfo/styles.scss",
+                "test": false
+            }
+        ],
+        "mainFile": "components/HomeInfo/index.js",
         "origin": "AUTHORED"
     },
     "version": "13.0.4"
