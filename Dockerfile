@@ -12,7 +12,6 @@ ARG LEGALS_PAGE_ID=8
 
 WORKDIR /usr/src/client
 COPY . .
-RUN npm config set '@bit:registry' https://node.bitsrc.io
 RUN npm install
 RUN npm run-script build
 
