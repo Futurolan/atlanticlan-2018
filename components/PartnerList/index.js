@@ -7,7 +7,7 @@ import PartnerCategories from '../PartnerCategories'
 function PartnerList ({
 
   partnerCategories: { loading, error, nodeQuery: partnerCategories },
-  partners: {loading2, error2, nodeQuery: partners}
+  partners: { loading2, error2, nodeQuery: partners }
 
 }) {
   if (error || error2) {
@@ -77,4 +77,4 @@ PartnerList.propTypes = {
   partners: PropTypes.object
 }
 
-export default compose(graphql(partnerCategories, {name: 'partnerCategories'}), graphql(partners, {name: 'partners'}))(PartnerList)
+export default compose(graphql(partnerCategories, { name: 'partnerCategories' }), graphql(partners, { name: 'partners' }))(PartnerList)

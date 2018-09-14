@@ -7,7 +7,7 @@ import Moment from 'react-moment'
 import Meta from '../Meta'
 import SocialNetworkLinks from '../SocialNetworkLinks'
 
-function NewsContent ({data: { loading, error, node }}) {
+function NewsContent ({ data: { loading, error, node } }) {
   if (error || (node && node.type.id !== 'news')) {
     return <div className='notification is-danger'>Une erreur est survenue pendant le chargement de l'actualité !!!</div>
   }
@@ -31,7 +31,7 @@ function NewsContent ({data: { loading, error, node }}) {
         </div>
       </div>
       <div className='content has-text-justified' >
-        <div dangerouslySetInnerHTML={{__html: node.content.processed}} />
+        <div dangerouslySetInnerHTML={{ __html: node.content.processed }} />
       </div>
 
     </div>

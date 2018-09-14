@@ -18,7 +18,7 @@ function InfosContent ({
         src={`https://www.google.com/maps/embed/v1/place?q=place_id:${node.placeId}&key=AIzaSyDxn9buXacF0h2mlroZlamJRDIsEIyDxYA`}
         allowFullScreen='' />
       <div className='box content'>
-        <div dangerouslySetInnerHTML={{__html: node.description.value}} />
+        <div dangerouslySetInnerHTML={{ __html: node.description.value }} />
       </div>
 
       {node.planning && <Accordion icon='fa-calendar-alt' title='Planning' text={node.planning.value} />}

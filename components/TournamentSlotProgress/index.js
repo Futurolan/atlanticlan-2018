@@ -13,7 +13,7 @@ class TournamentSlotProgress extends React.Component {
     }
     return (
       <div className='ga-tournament-slot-progress'>
-        <span className='has-text-weight-light'>Slot restants : {size - current}/{size}</span>
+        <span className='has-text-weight-light'>Slots : {current}/{size}</span>
         <progress className={`progress ${color} is-small`} value={current} max={size} />
       </div>
     )

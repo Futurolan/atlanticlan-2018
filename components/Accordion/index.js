@@ -7,17 +7,17 @@ import './styles.scss'
 class Accordion extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {isOpen: false}
+    this.state = { isOpen: false }
 
     this.toggleMenu = this.toggleMenu.bind(this)
   }
 
   toggleMenu () {
-    this.setState({isOpen: !this.state.isOpen})
+    this.setState({ isOpen: !this.state.isOpen })
   }
 
   render () {
-    const {icon, title, text} = this.props
+    const { icon, title, text } = this.props
 
     return (
       <div className='ga-accordion panel'>
@@ -36,8 +36,8 @@ class Accordion extends React.Component {
             </div>
           </div>
         </div>
-        <div className={classNames('panel-block', 'has-background-white', 'content', {'is-open': this.state.isOpen})}>
-          <div dangerouslySetInnerHTML={{__html: text}} />
+        <div className={classNames('panel-block', 'has-background-white', 'content', { 'is-open': this.state.isOpen })}>
+          <div dangerouslySetInnerHTML={{ __html: text }} />
         </div>
       </div>
     )

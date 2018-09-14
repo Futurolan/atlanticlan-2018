@@ -11,7 +11,7 @@ class TournamentPage extends React.Component {
   }
 
   render () {
-    const {nid} = this.props
+    const { nid } = this.props
     return (
       <Layout name='news-single-page has-bg-star'>
         <section className='section'>

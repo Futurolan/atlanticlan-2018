@@ -3,7 +3,7 @@ import Layout from 'components/Layout'
 import Meta from 'components/Meta'
 import TournamentList from 'components/TournamentList'
 import '../styles/styles.scss'
-import config from '../lib/config'
+import config from '../config/config'
 
 class TournoisPage extends React.Component {
   render () {

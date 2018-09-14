@@ -5,17 +5,20 @@ import classNames from 'classnames'
 import ActiveLink from '../ActiveLink'
 
 import './styles.scss'
+import TicketMenu from '../TicketMenu'
+
+import config from '../../config/config'
 
 class Header extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {isOpen: false}
+    this.state = { isOpen: false }
 
     this.toggleMenu = this.toggleMenu.bind(this)
   }
 
   toggleMenu () {
-    this.setState({isOpen: !this.state.isOpen})
+    this.setState({ isOpen: !this.state.isOpen })
   }
   render () {
     return (
@@ -34,14 +37,12 @@ class Header extends React.Component {
               <span />
             </button>
           </div>
-          <div className={classNames('navbar-menu', 'has-background-primary', 'has-text-centered', {'is-active': this.state.isOpen})} >
+          <div className={classNames('navbar-menu', 'has-background-primary', 'has-text-centered', { 'is-active': this.state.isOpen })} >
             <div className='navbar-start' />
             <div className='navbar-item'>
               <ActiveLink label='Actualités' className='has-text-white is-uppercase has-text-weight-bold' path='/news' />
             </div>
-            {/* <div className='navbar-item'> */}
-            {/* <ActiveLink label='Billeterie' path='/billeterie' /> */}
-            {/* </div> */}
+            <TicketMenu />
             <div className='navbar-item is-uppercase has-text-weight-bold'>
               <ActiveLink label='Tournois' className='has-text-white' path='/tournois' />
             </div>
@@ -53,23 +54,23 @@ class Header extends React.Component {
             </div>
             <div className='navbar-end'>
               <div className='navbar-item'>
-                <div className='field is-grouped'>
-                  <a className='control has-text-white' target='_blank' href='https://www.facebook.com/GamersAssembly'>
+                {config.social && <div className='field is-grouped'>
+                  {config.social.facebook && <a className='control has-text-white' target='_blank' href={config.social.facebook}>
                     <i className='fab fa-facebook' />
-                  </a>
-                  <a className='control has-text-white' target='_blank' href='https://twitter.com/GamersAssembly'>
+                  </a>}
+                  {config.social.twitter && <a className='control has-text-white' target='_blank' href={config.social.twitter}>
                     <i className='fab fa-twitter' />
-                  </a>
-                  <a className='control has-text-white' target='_blank' href='https://www.flickr.com/photos/futurolan'>
+                  </a>}
+                  {config.social.flickr && <a className='control has-text-white' target='_blank' href={config.social.flickr}>
                     <i className='fab fa-flickr' />
-                  </a>
-                  <a className='control has-text-white' target='_blank' href='https://twitch.tv/gamers_assembly'>
+                  </a>}
+                  {config.social.twitch && <a className='control has-text-white' target='_blank' href={config.social.twitch}>
                     <i className='fab fa-twitch' />
-                  </a>
-                  <a className='control has-text-white' target='_blank' href='https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw'>
+                  </a>}
+                  {config.social.youtube && <a className='control has-text-white' target='_blank' href={config.social.youtube}>
                     <i className='fab fa-youtube' />
-                  </a>
-                </div>
+                  </a>}
+                </div>}
               </div>
             </div>
           </div>

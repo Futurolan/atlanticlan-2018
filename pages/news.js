@@ -3,7 +3,7 @@ import Layout from 'components/Layout'
 import NewsList from 'components/NewsList'
 import Meta from 'components/Meta'
 import '../styles/styles.scss'
-import config from '../lib/config'
+import config from '../config/config'
 class NewsPage extends React.Component {
   render () {
     return (

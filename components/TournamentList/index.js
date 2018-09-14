@@ -23,7 +23,7 @@ function TournamentList ({
               imgDesktopUrl={tournament.image ? tournament.image.desktop.url : tournament.game.node.image.desktop.url}
               imgWidescreenUrl={tournament.image ? tournament.image.widescreen.url : tournament.game.node.image.widescreen.url}
               imgFullhdUrl={tournament.image ? tournament.image.fullhd.url : tournament.game.node.image.fullhd.url}
-              current={tournament.reservedSlot}
+              current={tournament.reservedSlot + (tournament.weezevent.nodes.length > 0 ? tournament.weezevent.nodes[0].count : 0)}
               size={tournament.size}
               platform={tournament.platform}
               pegi={tournament.game.node.pegi} />
@@ -66,6 +66,13 @@ export const tournaments = gql`
           }
           fullhd:derivative(style:CROP_2_1_416X208){
             url
+          }
+        }
+        weezevent:reverseFieldWeezeventTournamentNode(sort:{field:"created"},limit:1){
+          nodes:entities {
+            ...on NodeWeezevent{
+              count:fieldWeezeventCount
+            }
           }
         }
         game:fieldTournamentGame{

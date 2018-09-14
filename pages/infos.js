@@ -3,7 +3,7 @@ import Layout from 'components/Layout'
 import Meta from 'components/Meta'
 import InfosContent from 'components/InfosContent'
 import '../styles/styles.scss'
-import config from '../lib/config'
+import config from '../config/config'
 
 class InfosPage extends React.Component {
   render () {

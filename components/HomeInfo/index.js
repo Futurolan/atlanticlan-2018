@@ -21,19 +21,19 @@ function HomeInfo ({
             <div className='column is-12-tablet is-one-third-desktop has-text-centered'>
               <div className='box has-background-dark'>
                 <h3 className='title has-text-weight-bold has-text-white title-line'><span>{node.title1}</span></h3>
-                <div className='content has-text-white' dangerouslySetInnerHTML={{__html: node.content1.value}} />
+                <div className='content has-text-white' dangerouslySetInnerHTML={{ __html: node.content1.value }} />
               </div>
             </div>
             <div className='column is-12-tablet  is-one-third-desktop has-text-centered'>
               <div className='box has-background-dark'>
                 <h3 className='title has-text-weight-bold has-text-white title-line'><span>{node.title2}</span></h3>
-                <div className='content has-text-white' dangerouslySetInnerHTML={{__html: node.content2.value}} />
+                <div className='content has-text-white' dangerouslySetInnerHTML={{ __html: node.content2.value }} />
               </div>
             </div>
             <div className='column is-12-tablet  is-one-third-desktop has-text-centered'>
               <div className='box has-background-dark'>
                 <h3 className='title has-text-weight-bold has-text-white title-line '><span>{node.title3}</span></h3>
-                <div className='content has-text-white' dangerouslySetInnerHTML={{__html: node.content3.value}} />
+                <div className='content has-text-white' dangerouslySetInnerHTML={{ __html: node.content3.value }} />
               </div>
             </div>
           </div>

@@ -109,7 +109,7 @@ export default graphql(news, {
               return previousResult
             }
 
-            return Object.assign({}, previousResult, {nodeQuery: {entities: [...previousResult.nodeQuery.entities, ...fetchMoreResult.nodeQuery.entities], __typename: 'EntityQueryResult'}})
+            return Object.assign({}, previousResult, { nodeQuery: { entities: [...previousResult.nodeQuery.entities, ...fetchMoreResult.nodeQuery.entities], __typename: 'EntityQueryResult' } })
           }
         })
       }
