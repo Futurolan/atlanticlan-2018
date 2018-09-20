@@ -1,12 +1,12 @@
 let config = {
   title: 'Atlantic LAN 2018',
   description: 'Retrouvez l\'Atlantic LAN très prochainement',
-  image: `${process.env.BASE_URL}/static/img/logo-orange-200x200.png`,
+  image: `${process.env.BASE_URL}/static/img/logo-365x200.png`,
   home: {
     hero: {
       title: 'Atlantic LAN',
       subtitle: 'Edition 2018',
-      background: '/static/img/bg-orange-area.jpg'
+      background: '/static/img/bg-slide-al2018.jpg'
     }
   },
   news: {
