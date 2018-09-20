@@ -51,7 +51,7 @@ function HomeNewsList ({
               <Timeline
                 dataSource={{
                   sourceType: 'profile',
-                  screenName: 'GamersAssembly',
+                  screenName: 'AtlanticLan17',
                   noHeader: true
                 }}
                 options={{

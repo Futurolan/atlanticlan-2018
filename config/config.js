@@ -35,7 +35,7 @@ let config = {
   },
   social: {
     twitter: 'https://twitter.com/AtlanticLan17',
-    facebook: 'https://www.facebook.com/GamersAssembly',
+    facebook: 'https://www.facebook.com/AtlanticLan/',
     twitch: 'https://twitch.tv/gamers_assembly',
     youtube: 'https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw',
     flickr: 'https://www.flickr.com/photos/futurolan'
