@@ -4,9 +4,9 @@ let config = {
   image: `${process.env.BASE_URL}/static/img/logo-365x200.png`,
   home: {
     hero: {
-      title: 'Atlantic LAN',
-      subtitle: 'Edition 2018',
-      background: '/static/img/bg-slide-al2018.jpg'
+      // title: 'Atlantic LAN',
+      // subtitle: 'Edition 2018',
+      background: '/static/img/bg-slide-v2-al2018.jpg'
     }
   },
   news: {
