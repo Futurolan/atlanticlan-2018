@@ -34,7 +34,7 @@ let config = {
     description: 'Achetez vos places pour l\'Atlantic LAN 2018'
   },
   social: {
-    twitter: 'https://twitter.com/GamersAssembly',
+    twitter: 'https://twitter.com/AtlanticLan17',
     facebook: 'https://www.facebook.com/GamersAssembly',
     twitch: 'https://twitch.tv/gamers_assembly',
     youtube: 'https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw',
