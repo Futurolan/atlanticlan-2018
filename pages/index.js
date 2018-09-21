@@ -14,7 +14,7 @@ class HomePage extends React.Component {
       <Layout name='home-page'>
         <div>
           <Meta title='Accueil' />
-          <Banner imgUrl={config.home.banner.background} />
+          <Banner imgUrl={config.home.banner} />
           <HomeInfoBlocks />
           <HomeNewsList />
         </div>
