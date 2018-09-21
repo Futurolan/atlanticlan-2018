@@ -1,12 +1,12 @@
 let config = {
   title: 'Atlantic LAN 2018',
   description: 'Retrouvez l\'Atlantic LAN très prochainement',
-  image: `${process.env.BASE_URL}/static/img/logo-orange-200x200.png`,
+  image: `${process.env.BASE_URL}/static/img/logo-365x200.png`,
   home: {
     hero: {
-      title: 'Atlantic LAN',
-      subtitle: 'Edition 2018',
-      background: '/static/img/bg-orange-area.jpg'
+      // title: 'Atlantic LAN',
+      // subtitle: 'Edition 2018',
+      background: '/static/img/bg-slide-v3-al2018.jpg'
     }
   },
   news: {
@@ -34,11 +34,11 @@ let config = {
     description: 'Achetez vos places pour l\'Atlantic LAN 2018'
   },
   social: {
-    twitter: 'https://twitter.com/GamersAssembly',
-    facebook: 'https://www.facebook.com/GamersAssembly',
-    twitch: 'https://www.flickr.com/photos/futurolan',
-    youtube: 'https://twitch.tv/gamers_assembly',
-    flickr: 'https://www.youtube.com/channel/UCbfhRIAsc4xdRACnDUwRfRw'
+    twitter: 'https://twitter.com/AtlanticLan17',
+    facebook: 'https://www.facebook.com/AtlanticLan/',
+    // twitch: 'https://twitch.tv/gamers_assembly',
+    youtube: 'https://www.youtube.com/channel/UCiX3u5T5B2LZ46FUBRMNmSA',
+    flickr: 'https://www.flickr.com/photos/futurolan'
   }
 }
 

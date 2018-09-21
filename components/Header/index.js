@@ -28,7 +28,7 @@ class Header extends React.Component {
           <div className='navbar-brand'>
             <Link href='/'>
               <a>
-                <img src='/static/img/logo-orange-100x100.png' />
+                <img src='/static/img/logo-183x100.png' />
               </a>
             </Link>
             <button className='button navbar-burger is-dark' onClick={this.toggleMenu}>
