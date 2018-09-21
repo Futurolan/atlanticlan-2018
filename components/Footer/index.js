@@ -12,13 +12,8 @@ class Footer extends React.Component {
           <div className='content has-text-centered'>
             <ActiveLink className='has-text-white' label='Contacts' path='/contacts' />
             <span> - </span>
-            {/* <ActiveLink className='has-text-white' label='Accreditation Presse' path='/espace-presse' />
-            <span> - </span> */}
             <ActiveLink className='has-text-white' label='Mentions Légales ' path='/mentions-legales' />
-            {/* <span> - </span>
-            <ActiveLink className='has-text-white' label='Recrutement' path='/recrutement' /> */}
           </div>
-
         </div>
       </footer>
     )
