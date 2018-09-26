@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Banner = (props) => (
-  <section className='ga-banner'>
+  <section className='ga-banner has-text-centered'>
     <img src={props.imgUrl} />
   </section>
 )
