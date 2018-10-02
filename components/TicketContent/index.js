@@ -29,7 +29,7 @@ function TicketContent ({ data: { loading, error, node } }) {
       {node.rules && <div className='box content'>
         <h2 className='title is-size-5'>Règlement intérieur</h2>
         <p>
-          L'acquisition d'un ticket entraîne adhésion au règlement intérieur disponible ci-dessous.
+          L'acquisition d'un ticket entraîne l'adhésion au règlement intérieur disponible ci-dessous.
         </p>
         <div className='has-text-centered'>
           <a target='_blank' href={node.rules.file.url}><button className='button is-primary '>Télécharger le règlement intérieur (format pdf)</button></a>
