@@ -15,7 +15,7 @@ class ContactsPage extends React.Component {
       <Layout name='mentions-legales-page has-bg-star'>
         <div className='section'>
           <div className='container'>
-            <PageContent nid={config.legals.pageId} />
+            <PageContent nid={config.legals.pageId.toString()} />
           </div>
         </div>
       </Layout>
