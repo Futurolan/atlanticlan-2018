@@ -3,6 +3,7 @@ let config = {
   logo: `/static/img/logo-183x100.png`,
   description: 'Retrouvez l\'Atlantic LAN très prochainement',
   metaImage: `${process.env.BASE_URL}/static/img/logo-365x200.png`,
+  gaTrackingId: 'UA-7594737-17',
   home: {
     banner: '/static/img/bg-banner-al2018.jpg',
     twitterAccount: 'AtlanticLan17'
