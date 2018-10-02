@@ -9,8 +9,6 @@ function PageContent ({ data: { loading, error, node } }) {
     return <div className='notification is-danger'>Une erreur est survenue pendant le chargement de la page !!!</div>
   }
 
-  console.log(node)
-  
   if (node) {
     return <div className='ga-page-content'>
       <Meta title={node.title} description={node.description} />
