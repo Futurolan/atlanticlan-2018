@@ -5,10 +5,10 @@ import TicketContent from '../components/TicketContent'
 import Meta from '../components/Meta'
 import config from '../config/config'
 
-class BilleteriePage extends React.Component {
+class BilletteriePage extends React.Component {
   render () {
     return (
-      <Layout name='billeterie-page has-bg-star'>
+      <Layout name='billetterie-page has-bg-star'>
         <section className='section'>
           <Meta title={config.tickets.title} description={config.tickets.description} />
           <div className='container'>
@@ -20,4 +20,4 @@ class BilleteriePage extends React.Component {
   }
 }
 
-export default BilleteriePage
+export default BilletteriePage
