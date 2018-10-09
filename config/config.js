@@ -4,6 +4,10 @@ let config = {
   description: 'Retrouvez l\'Atlantic LAN très prochainement',
   metaImage: `${process.env.BASE_URL}/static/img/logo-365x200.png`,
   gaTrackingId: 'UA-7594737-17',
+  // mainPartner: {
+  //   logo: '/static/img/image106pxdehaut.png',
+  //   url: 'https://bmagic.fr'
+  // },
   home: {
     banner: '/static/img/bg-banner-al2018.jpg',
     twitterAccount: 'AtlanticLan17'
