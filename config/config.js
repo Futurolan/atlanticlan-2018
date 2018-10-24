@@ -39,7 +39,6 @@ let config = {
     description: 'Toutes les informations sur cet évènement'
   },
   tickets: {
-    active: true,
     title: 'Billetterie',
     description: 'Achetez vos places pour l\'Atlantic LAN 2018'
   },
