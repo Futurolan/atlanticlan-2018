@@ -13,7 +13,6 @@ function NewsContent ({ data: { loading, error, node } }) {
   }
 
   if (node) {
-    const processedContent = node.content.processed.replace(new RegExp('/sites/default/files/inline-images/', 'g'), `${process.env.BACKEND_API_URL}/sites/default/files/inline-images/`)
     return <div className='ga-news-content'>
       <Meta title={node.title} image={node.image.fullhd.url} description={node.description} />
 
@@ -32,7 +31,7 @@ function NewsContent ({ data: { loading, error, node } }) {
         </div>
       </div>
       <div className='content has-text-justified' >
-        <div dangerouslySetInnerHTML={{ __html: processedContent }} />
+        <div dangerouslySetInnerHTML={{ __html: node.content.processed }} />
       </div>
 
     </div>
