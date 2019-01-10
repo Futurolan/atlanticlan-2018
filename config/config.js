@@ -2,7 +2,7 @@ let config = {
   title: 'Atlantic LAN 2018',
   logo: `/static/img/logo-183x100.png`,
   description: 'Retrouvez l\'Atlantic LAN très prochainement',
-  metaImagePath: `${process.env.BASE_URL}/static/img/logo-365x200.png`,
+  metaImagePath: `/static/img/logo-365x200.png`,
   gaTrackingId: 'UA-128777022-3',
   // mainPartner: {
   //   logo: '/static/img/image106pxdehaut.png',
